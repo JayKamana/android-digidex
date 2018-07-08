@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.phonexpc.digidex.MainActivity">
+
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="45dp"
+        android:alignmentMode="alignBounds"
+        android:columnCount="3"
+        android:padding="4dp"
+        android:rowCount="3"
+        android:rowOrderPreserved="false"
+        android:useDefaultMargins="true">
+
+        <ImageButton
+            android:id="@+id/guilmon"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/guilmon"
+            android:gravity="center" />
+
+        <ImageButton
+            android:id="@+id/renamon"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/renamon"
+            android:gravity="center" />
+
+        <ImageButton
+            android:id="@+id/terriermon"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/terriermon"
+            android:gravity="center" />
+
+        <ImageButton
+            android:id="@+id/impmon"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/impmon"
+            android:gravity="center" />
+
+        <ImageButton
+            android:id="@+id/lopmon"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/lopmon"
+            android:gravity="center" />
+
+        <ImageButton
+            android:id="@+id/leomon"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/leomon"
+            android:gravity="center" />
+
+        <ImageButton
+            android:id="@+id/cyberdramon"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/cyberdramon"
+            android:gravity="center" />
+
+        <ImageButton
+            android:id="@+id/guardromon"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/guardromon"
+            android:gravity="center" />
+
+        <ImageButton
+            android:id="@+id/marinangemon"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/marinangemon"
+            android:gravity="center" />
+
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="Digimon Tamers"
+        android:textSize="21sp" />
+</RelativeLayout>
