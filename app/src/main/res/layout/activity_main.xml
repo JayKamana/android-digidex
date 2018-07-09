@@ -24,6 +24,7 @@
 
         <ImageButton
             android:id="@+id/guilmon"
+            android:tag="Guilmon"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_columnWeight="1"
@@ -33,6 +34,7 @@
 
         <ImageButton
             android:id="@+id/renamon"
+            android:tag="Renamon"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_columnWeight="1"
@@ -42,6 +44,7 @@
 
         <ImageButton
             android:id="@+id/terriermon"
+            android:tag="Terriermon"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_columnWeight="1"
@@ -51,6 +54,7 @@
 
         <ImageButton
             android:id="@+id/impmon"
+            android:tag="Impmon"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_columnWeight="1"
@@ -60,6 +64,7 @@
 
         <ImageButton
             android:id="@+id/lopmon"
+            android:tag="Lopmon"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_columnWeight="1"
@@ -69,6 +74,7 @@
 
         <ImageButton
             android:id="@+id/leomon"
+            android:tag="Leomon"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_columnWeight="1"
@@ -78,6 +84,7 @@
 
         <ImageButton
             android:id="@+id/cyberdramon"
+            android:tag="Cyberdramon"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_columnWeight="1"
@@ -87,6 +94,7 @@
 
         <ImageButton
             android:id="@+id/guardromon"
+            android:tag="Guardromon"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_columnWeight="1"
@@ -96,6 +104,7 @@
 
         <ImageButton
             android:id="@+id/marinangemon"
+            android:tag="Marinangemon"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_columnWeight="1"
