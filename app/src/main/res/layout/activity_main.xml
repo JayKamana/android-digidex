@@ -6,122 +6,12 @@
     android:layout_height="match_parent"
     tools:context="com.example.phonexpc.digidex.MainActivity">
 
-
-    <GridLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="45dp"
-        android:alignmentMode="alignBounds"
-        android:columnCount="3"
-        android:padding="4dp"
-        android:rowCount="3"
-        android:rowOrderPreserved="false"
-        android:useDefaultMargins="true">
-
-        <ImageButton
-            android:id="@+id/guilmon"
-            android:tag="Guilmon"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:background="@drawable/guilmon"
-            android:gravity="center" />
-
-        <ImageButton
-            android:id="@+id/renamon"
-            android:tag="Renamon"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:background="@drawable/renamon"
-            android:gravity="center" />
-
-        <ImageButton
-            android:id="@+id/terriermon"
-            android:tag="Terriermon"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:background="@drawable/terriermon"
-            android:gravity="center" />
-
-        <ImageButton
-            android:id="@+id/impmon"
-            android:tag="Impmon"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:background="@drawable/impmon"
-            android:gravity="center" />
-
-        <ImageButton
-            android:id="@+id/lopmon"
-            android:tag="Lopmon"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:background="@drawable/lopmon"
-            android:gravity="center" />
-
-        <ImageButton
-            android:id="@+id/leomon"
-            android:tag="Leomon"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:background="@drawable/leomon"
-            android:gravity="center" />
-
-        <ImageButton
-            android:id="@+id/cyberdramon"
-            android:tag="Cyberdramon"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:background="@drawable/cyberdramon"
-            android:gravity="center" />
-
-        <ImageButton
-            android:id="@+id/guardromon"
-            android:tag="Guardromon"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:background="@drawable/guardromon"
-            android:gravity="center" />
-
-        <ImageButton
-            android:id="@+id/marinangemon"
-            android:tag="Marinangemon"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:background="@drawable/marinangemon"
-            android:gravity="center" />
+    <fragment
+        android:id="@+id/frag_digidex"
+        class="com.example.phonexpc.digidex.DigidexFragment"
+        tools:layout="@layout/fragment_digidex"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
-    </GridLayout>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp"
-        android:text="Digimon Tamers"
-        android:textSize="21sp" />
 </RelativeLayout>

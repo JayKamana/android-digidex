@@ -6,31 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.phonexpc.digidex.DigimonDetails">
 
-    <TextView
-        android:id="@+id/digimonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:text="TextView" />
+    <fragment
+        android:id="@+id/frag_details"
+        class="com.example.phonexpc.digidex.DetailsFragment"
+        tools:layout="@layout/fragment_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <TextView
-        android:id="@+id/digimonDesc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/digimonImageView"
-        android:layout_marginTop="45dp"
-        android:padding="10dp"
-        android:text="TextView" />
-
-    <ImageView
-        android:id="@+id/digimonImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_below="@+id/digimonName"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp" />
 </RelativeLayout>
