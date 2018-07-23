@@ -1,7 +1,9 @@
 package com.example.phonexpc.digidex;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -35,7 +37,8 @@ public class DigidexFragment extends Fragment implements View.OnClickListener{
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        guilmon = getView().findViewById(R.id.guilmon);
+
+
         guilmon = getView().findViewById(R.id.guilmon);
         renamon = getView().findViewById(R.id.renamon);
         cyberdramon = getView().findViewById(R.id.cyberdramon);
@@ -60,6 +63,8 @@ public class DigidexFragment extends Fragment implements View.OnClickListener{
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+
 
 
     }
@@ -133,7 +138,14 @@ public class DigidexFragment extends Fragment implements View.OnClickListener{
             Intent intent = new Intent(getActivity(), DigimonDetails.class);
             intent.putExtra("Name", digimonName);
             intent.putExtra("Desc", aBuffer);
-            startActivity(intent);
+
+            if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
+                startActivity(intent);
+            } else {
+              DetailsFragment frag = (DetailsFragment)getActivity().getSupportFragmentManager().findFragmentById(R.id.frag_details);;
+                frag.setName(digimonName, aBuffer);
+            }
+
 
         } catch (Exception e){
             e.printStackTrace();

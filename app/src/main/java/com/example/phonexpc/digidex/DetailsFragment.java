@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DetailsFragment extends Fragment {
 
@@ -34,12 +35,31 @@ public class DetailsFragment extends Fragment {
         digimonImageView = getView().findViewById(R.id.digimonImageView);
 
 
-        Bundle bundle = getActivity().getIntent().getExtras();
+        try{
+            if(getActivity().getIntent().getExtras().getString("Name").length() != 0){
+                Bundle bundle = getActivity().getIntent().getExtras();
 
-        digimonName.setText(bundle.getString("Name"));
-        digimonDesc.setText(bundle.getString("Desc"));
+                digimonName.setText(bundle.getString("Name"));
+                digimonDesc.setText(bundle.getString("Desc"));
 
-        switch(bundle.getString("Name")){
+                selectImage(bundle.getString("Name"));
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+
+    }
+
+    public void setName(String name, String desc){
+        digimonName.setText(name);
+        digimonDesc.setText(desc);
+        selectImage(name);
+    }
+
+    public void selectImage(String image){
+        switch(image){
             case "Cyberdramon":
                 digimonImageView.setBackgroundResource(R.drawable.cyberdramon);
                 break;
@@ -68,8 +88,9 @@ public class DetailsFragment extends Fragment {
                 digimonImageView.setBackgroundResource(R.drawable.terriermon);
                 break;
         }
-
     }
+
+
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
