@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,8 @@ public class DetailsFragment extends Fragment {
         digimonImageView = getView().findViewById(R.id.digimonImageView);
 
 
+
+
         try{
             if(getActivity().getIntent().getExtras().getString("Name").length() != 0){
                 Bundle bundle = getActivity().getIntent().getExtras();
@@ -59,6 +62,7 @@ public class DetailsFragment extends Fragment {
     }
 
     public void selectImage(String image){
+
         switch(image){
             case "Cyberdramon":
                 digimonImageView.setBackgroundResource(R.drawable.cyberdramon);

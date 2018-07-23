@@ -8,10 +8,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -139,11 +142,17 @@ public class DigidexFragment extends Fragment implements View.OnClickListener{
             intent.putExtra("Name", digimonName);
             intent.putExtra("Desc", aBuffer);
 
-            if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
-                startActivity(intent);
-            } else {
-              DetailsFragment frag = (DetailsFragment)getActivity().getSupportFragmentManager().findFragmentById(R.id.frag_details);;
+            DisplayMetrics displayMetrics = new DisplayMetrics();
+            getActivity().getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+            int heigth = displayMetrics.heightPixels;
+
+
+            if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE && heigth >= 900){
+                DetailsFragment frag = (DetailsFragment)getActivity().getSupportFragmentManager().findFragmentById(R.id.frag_details);;
                 frag.setName(digimonName, aBuffer);
+
+            } else {
+                startActivity(intent);
             }
 
 
